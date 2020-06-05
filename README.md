@@ -40,7 +40,7 @@ Both of these data sets are available in different formats including as a csv fi
 
 The end goal is to clean these data sets and bring them together into one table so that we'll have an ETL pipeline to extract, transform, and load this data into a new database.
 
-**If you don’t have experience manipulating data with the Pandas library, check [this Repo](https://github.com/A2Amir/Introduction-To-Numpy-and-Pandas), or these resources [10 minute Intro to Pandas](https://pandas.pydata.org/pandas-docs/stable/10min.html),  [Pandas Basic Functionality](https://pandas.pydata.org/pandas-docs/stable/basics.html) to get you familiar.**
+* **If you don’t have experience manipulating data with the Pandas library, check [this Repo](https://github.com/A2Amir/Introduction-To-Numpy-and-Pandas), or these resources [10 minute Intro to Pandas](https://pandas.pydata.org/pandas-docs/stable/10min.html),  [Pandas Basic Functionality](https://pandas.pydata.org/pandas-docs/stable/basics.html) to get you familiar.**
 
 ## Extract data from different sources:
 The first step in an ETL pipeline is extraction. Data comes in all types of different formats, and you'll practice extracting data from csv files, JSON files, XML files, SQL databases, and the web.
@@ -52,15 +52,13 @@ CSV stands for comma-separated values. These types of files separate values with
      id,regionname,countryname,prodline,lendinginstr
      P162228,Other,World;World,RE,Investment Project Financing
 
-**Take a look at [this Jupyter notebook]() to familiarize yourself with reading csv files.**
+* **Take a look at [this Jupyter notebook]() to familiarize yourself with reading csv files.**
 ### JSON
 JSON is a file format with **key/value** pairs. It looks like a Python dictionary. The exact same CSV file represented above could look like this in JSON:
 
       [{"id":"P162228","regionname":"Other","countryname":"World;World","prodline":"RE","lendinginstr":"Investment Project Financing"}]
 
-Each line in the data is inside of a squiggly bracket {}. The variable names are the keys, and the variable values are the values.
-
-* There are other ways to organize JSON data, but the general rule is that JSON is organized into **key/value** pairs. 
+Each line in the data is inside of a squiggly bracket {}. The variable names are the keys, and the variable values are the values. There are other ways to organize JSON data, but the general rule is that JSON is organized into **key/value** pairs. 
 
 ### XML
 Another data format is called XML (Extensible Markup Language). XML is very similar to HTML at least in terms of formatting. The main difference between the two is that HTML has pre-defined tags that are standardized. In XML, tags can be tailored to the data set. Here is what this same data would look like as XML.
@@ -73,9 +71,9 @@ Another data format is called XML (Extensible Markup Language). XML is very simi
            <LENDINGINSTR>Investment Project Financing</LENDINGINSTR>
          </ENTRY>
 
-*	XML is falling out of favor especially because JSON tends to be easier to navigate; however, you still might come across XML data. From a data perspective, the process for handling HTML and XML data is essentially the same.
+XML is falling out of favor especially because JSON tends to be easier to navigate; however, you still might come across XML data. From a data perspective, the process for handling HTML and XML data is essentially the same.
 
-**Check [this Jupyter notebook]() to familiarize yourself with reading JSON and XML files.**
+* **Check [this Jupyter notebook]() to familiarize yourself with reading JSON and XML files.**
 
 
 ### SQL databases
@@ -85,10 +83,11 @@ SQL databases store data in tables using [primary and foreign keys](https://docs
   <img src="/imgs/2.PNG" alt="" width="300" height="100" >
  </p>
  
-**Take a look at [this Jupyter notebook]() to familiarize yourself with reading SQL databases.**
+* **Take a look at [this Jupyter notebook]() to familiarize yourself with reading SQL databases.**
 
 ### APIs
 
-Companies and organizations provide APIs so that programmers can access data in an official, safe way. APIs allow you to download, and sometimes even upload or modify, data from a web server without giving you direct access. APIs generally provide data in either JSON or XML format. **Take a look at [this Jupyter notebook]() to familiarize yourself with reading from APIs.**
+Companies and organizations provide APIs so that programmers can access data in an official, safe way. APIs allow you to download, and sometimes even upload or modify, data from a web server without giving you direct access. APIs generally provide data in either JSON or XML format.
+* **Take a look at [this Jupyter notebook]() to familiarize yourself with reading from APIs.**
 
 
