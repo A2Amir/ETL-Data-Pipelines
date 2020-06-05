@@ -53,3 +53,26 @@ CSV stands for comma-separated values. These types of files separate values with
      P162228,Other,World;World,RE,Investment Project Financing
 
 Take a look at [this Jupyter notebook]() to familiarize yourself with reading csv files.
+### JSON
+JSON is a file format with **key/value** pairs. It looks like a Python dictionary. The exact same CSV file represented above could look like this in JSON:
+
+      [{"id":"P162228","regionname":"Other","countryname":"World;World","prodline":"RE","lendinginstr":"Investment Project Financing"}]
+
+Each line in the data is inside of a squiggly bracket {}. The variable names are the keys, and the variable values are the values.
+
+* There are other ways to organize JSON data, but the general rule is that JSON is organized into **key/value** pairs. 
+
+### XML
+Another data format is called XML (Extensible Markup Language). XML is very similar to HTML at least in terms of formatting. The main difference between the two is that HTML has pre-defined tags that are standardized. In XML, tags can be tailored to the data set. Here is what this same data would look like as XML.
+
+         <ENTRY>
+           <ID>P162228</ID>
+           <REGIONNAME>Other</REGIONNAME>
+           <COUNTRYNAME>World;World</COUNTRYNAME>
+           <PRODLINE>RE</PRODLINE>
+           <LENDINGINSTR>Investment Project Financing</LENDINGINSTR>
+         </ENTRY>
+
+•	XML is falling out of favor especially because JSON tends to be easier to navigate; however, you still might come across XML data. From a data perspective, the process for handling HTML and XML data is essentially the same.
+
+Check [this Jupyter notebook]() to familiarize yourself with reading JSON and XML files.
