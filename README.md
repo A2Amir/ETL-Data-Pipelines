@@ -30,7 +30,7 @@ Throughout this Repo I am going to use data from the World Bank Website to creat
 4.	ETL Pipeline
     *	code an ETL pipeline
     
-The data from the World Bank comes from two sources:
+**The data from the World Bank comes from two sources:**
 
 1.	[World Bank Indicator Data](https://data.worldbank.org/indicator) - This data contains socio-economic indicators (statistics) for countries around the world. A few example indicators include population, arable land, and central government debt.
 
