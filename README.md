@@ -52,7 +52,8 @@ CSV stands for comma-separated values. These types of files separate values with
      id,regionname,countryname,prodline,lendinginstr
      P162228,Other,World;World,RE,Investment Project Financing
 
-* **Take a look at [this Jupyter notebook]() to familiarize yourself with reading csv files.**
+* **Take a look at [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/1_csv.ipynb) to familiarize yourself with reading csv files.**
+
 ### JSON
 JSON is a file format with **key/value** pairs. It looks like a Python dictionary. The exact same CSV file represented above could look like this in JSON:
 
@@ -73,21 +74,21 @@ Another data format is called XML (Extensible Markup Language). XML is very simi
 
 XML is falling out of favor especially because JSON tends to be easier to navigate; however, you still might come across XML data. From a data perspective, the process for handling HTML and XML data is essentially the same.
 
-* **Check [this Jupyter notebook]() to familiarize yourself with reading JSON and XML files.**
+* **Check [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/2_JSON_XML.ipynb) to familiarize yourself with reading JSON and XML files.**
 
 
 ### SQL databases
 SQL databases store data in tables using [primary and foreign keys](https://docs.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-2017). In a SQL database, the same data would look like this:
 
-<p align="right">
-  <img src="/imgs/2.PNG" alt="" width="300" height="100" >
+<p align="center">
+  <img src="/imgs/2.PNG" alt="" width="400" height="150" >
  </p>
  
-* **Take a look at [this Jupyter notebook]() to familiarize yourself with reading SQL databases.**
+* **Take a look at [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/3_sql.ipynb) to familiarize yourself with reading SQL databases.**
 
 ### APIs
 
 Companies and organizations provide APIs so that programmers can access data in an official, safe way. APIs allow you to download, and sometimes even upload or modify, data from a web server without giving you direct access. APIs generally provide data in either JSON or XML format.
-* **Take a look at [this Jupyter notebook]() to familiarize yourself with reading from APIs.**
+* **Take a look at [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/4_API.ipynb) to familiarize yourself with reading from APIs.**
 
 
