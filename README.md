@@ -42,7 +42,7 @@ The end goal is to clean these data sets and bring them together into one table 
 
 * **If you don’t have experience manipulating data with the Pandas library, check [this Repo](https://github.com/A2Amir/Introduction-To-Numpy-and-Pandas), or these resources [10 minute Intro to Pandas](https://pandas.pydata.org/pandas-docs/stable/10min.html),  [Pandas Basic Functionality](https://pandas.pydata.org/pandas-docs/stable/basics.html) to get you familiar.**
 
-## Extract data from different sources:
+## 1. Extract data from different sources:
 The first step in an ETL pipeline is extraction. Data comes in all types of different formats, and you'll practice extracting data from csv files, JSON files, XML files, SQL databases, and the web.
 
 ### CSV files
@@ -92,3 +92,18 @@ Companies and organizations provide APIs so that programmers can access data in 
 * **Take a look at [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/4_API.ipynb) to familiarize yourself with reading from APIs.**
 
 
+## 2.	Transform data
+
+In surveys, data scientists have said that they spend 80% of their time transforming data.In this section I am going through each of these steps.
+
+### combining data from different sources
+
+In this [Jupyter notebook]() we will combine two data sets together into one pandas data frame. check it to get more familiar.
+
+### Cleaning Data
+
+Cleaning data is a big topic. Every data set might have its own issues whether that involves missing values, duplicated entries, data entry mistakes, etc. In this [Jupyter notebook]() , I'll do some data cleaning on the World Bank projects and World Bank indicators data sets. 
+
+## Data Types
+
+When reading in a data set, pandas will try to guess the data type of each column like float, integer, datettime, bool, etc. In Pandas, strings are called "object" dtypes. However, Pandas does not always get this right. That is an issue. Check this [Jupyter notebook]() for more infomation.
