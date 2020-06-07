@@ -98,26 +98,26 @@ In surveys, data scientists have said that they spend 80% of their time transfor
 
 ### combining data from different sources
 
-In this [Jupyter notebook]() we will combine two data sets together into one pandas data frame. check it to get more familiar.
+In this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/5_combining_data.ipynb) we will combine two data sets together into one pandas data frame. check it to get more familiar.
 
 ### Cleaning Data
 
-Cleaning data is a big topic. Every data set might have its own issues whether that involves missing values, duplicated entries, data entry mistakes, etc. In this [Jupyter notebook]() , I'll do some data cleaning on the World Bank projects and World Bank indicators data sets. 
+Cleaning data is a big topic. Every data set might have its own issues whether that involves missing values, duplicated entries, data entry mistakes, etc. In this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/6_cleaning_data.ipynb) , I'll do some data cleaning on the World Bank projects and World Bank indicators data sets. 
 
 ## Data Types
 
-When reading in a data set, pandas will try to guess the data type of each column like float, integer, datettime, bool, etc. In Pandas, strings are called "object" dtypes. However, Pandas does not always get this right. That is an issue. Check this [Jupyter notebook]() for more infomation.
+When reading in a data set, pandas will try to guess the data type of each column like float, integer, datettime, bool, etc. In Pandas, strings are called "object" dtypes. However, Pandas does not always get this right. That is an issue. Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/7_datatypes.ipynb) for more infomation.
 
 ## Parsing Dates
 
-Another common data transformation involves parsing dates. Parsing generally means that you start with a string and then transform that string into a different data type. In this case, that means taking a date in the format of a string and transforming the string into a date type. Check this [Jupyter notebook]() for more infomation.
+Another common data transformation involves parsing dates. Parsing generally means that you start with a string and then transform that string into a different data type. In this case, that means taking a date in the format of a string and transforming the string into a date type. Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/8_parsingdates.ipynb) for more infomation.
 
 ## Encodings
 
 Encodings are a set of rules mapping string characters to their binary representations. Python supports dozens of different encoding as seen here in this [link](https://docs.python.org/3/library/codecs.html#standard-encodings). Because the web was originally in English, the first encoding rules mapped binary code to the English alphabet.
 
 <p align="center">
-  <img src="/imgs/3.PNG" alt="" width="400" height="150" >
+  <img src="/imgs/3.PNG" alt="" width="2500" height="250" >
  </p>
  
 The English alphabet has only 26 letters. But other languages have many more characters including accents, tildes and umlauts. As time went on, more encodings were invented to deal with languages other than English. The utf-8 standard tries to provide a single encoding schema that can encompass all text.
