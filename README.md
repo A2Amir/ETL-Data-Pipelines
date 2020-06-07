@@ -107,3 +107,19 @@ Cleaning data is a big topic. Every data set might have its own issues whether t
 ## Data Types
 
 When reading in a data set, pandas will try to guess the data type of each column like float, integer, datettime, bool, etc. In Pandas, strings are called "object" dtypes. However, Pandas does not always get this right. That is an issue. Check this [Jupyter notebook]() for more infomation.
+
+## Parsing Dates
+
+Another common data transformation involves parsing dates. Parsing generally means that you start with a string and then transform that string into a different data type. In this case, that means taking a date in the format of a string and transforming the string into a date type. Check this [Jupyter notebook]() for more infomation.
+
+## Encodings
+
+Encodings are a set of rules mapping string characters to their binary representations. Python supports dozens of different encoding as seen here in this [link](https://docs.python.org/3/library/codecs.html#standard-encodings). Because the web was originally in English, the first encoding rules mapped binary code to the English alphabet.
+
+<p align="center">
+  <img src="/imgs/3.PNG" alt="" width="400" height="150" >
+ </p>
+ 
+The English alphabet has only 26 letters. But other languages have many more characters including accents, tildes and umlauts. As time went on, more encodings were invented to deal with languages other than English. The utf-8 standard tries to provide a single encoding schema that can encompass all text.
+
+The problem is that it's difficult to know what encoding rules were used to make a file unless somebody tells you. The most common encoding by far is utf-8. Pandas will assume that files are utf-8 when you read them in or write them out. but if Pandas dosent know the encoding of a file, can not read in. Check this [Jupyter notebook]() for more infomation.
