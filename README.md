@@ -122,7 +122,7 @@ Encodings are a set of rules mapping string characters to their binary represent
  
 The English alphabet has only 26 letters. But other languages have many more characters including accents, tildes and umlauts. As time went on, more encodings were invented to deal with languages other than English. The utf-8 standard tries to provide a single encoding schema that can encompass all text.
 
-The problem is that it's difficult to know what encoding rules were used to make a file unless somebody tells you. The most common encoding by far is utf-8. Pandas will assume that files are utf-8 when you read them in or write them out. but if Pandas dosent know the encoding of a file, can not read in. Check this [Jupyter notebook]() for more infomation.
+The problem is that it's difficult to know what encoding rules were used to make a file unless somebody tells you. The most common encoding by far is utf-8. Pandas will assume that files are utf-8 when you read them in or write them out. but if Pandas dosent know the encoding of a file, can not read in. Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/9_encodings.ipynb) for more infomation.
 
 * There is a Python library that can be of some help when you don't know an encoding [chardet](https://pypi.org/project/chardet/). 
 
@@ -135,6 +135,13 @@ If you have missing data, you really only have two options, you can **delete dat
 
 * When I say **delete data**, I mean that deleting rows and columns that have more than %95 constantly missing values and deleting these rows and columns has no effect on the analysis.
 
-* The process of **filling in missing values** is called **imputation**. A few ways to impute are using the mean or median or mode so that you don't have to delete entire rows or columns of data. Another common method especially for time series data is to use **Forward Fill** (values are pushed forward down to replace any empty values) or **Backward Fill** (Backward Fill does the opposite,values move up to fill in empty values). These technique really only work if the data is ordered by time.  
+* The process of **filling in missing values** is called **imputation**. A few ways to impute are using the mean or median or mode so that you don't have to delete entire rows or columns of data. Another common method especially for time series data is to use **Forward Fill** (values are pushed forward down to replace any empty values) or **Backward Fill** (Backward Fill does the opposite,values move up to fill in empty values). These technique really only work if the data is ordered by time. 
 
 * Filling in missing values can be somewhat of an art and you'll need to test how different strategies affect the results of your Machine Learning models. 
+
+Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/10_imputations.ipynb) for more infomation.
+
+## Duplicate Data
+
+A data set might have duplicate data: in other words, A same record is represented multiple times. Sometimes, it's easy to find and eliminate duplicate data like when two records are exactly the same. At other times, duplicate data is hard to spot.Check this [Jupyter notebook]() for more infomation.
+
