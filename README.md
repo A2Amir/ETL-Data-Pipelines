@@ -117,9 +117,24 @@ Another common data transformation involves parsing dates. Parsing generally mea
 Encodings are a set of rules mapping string characters to their binary representations. Python supports dozens of different encoding as seen here in this [link](https://docs.python.org/3/library/codecs.html#standard-encodings). Because the web was originally in English, the first encoding rules mapped binary code to the English alphabet.
 
 <p align="center">
-  <img src="/imgs/3.PNG" alt="" width="2500" height="250" >
+  <img src="/imgs/3.PNG" alt="" width="250" height="250" >
  </p>
  
 The English alphabet has only 26 letters. But other languages have many more characters including accents, tildes and umlauts. As time went on, more encodings were invented to deal with languages other than English. The utf-8 standard tries to provide a single encoding schema that can encompass all text.
 
 The problem is that it's difficult to know what encoding rules were used to make a file unless somebody tells you. The most common encoding by far is utf-8. Pandas will assume that files are utf-8 when you read them in or write them out. but if Pandas dosent know the encoding of a file, can not read in. Check this [Jupyter notebook]() for more infomation.
+
+* There is a Python library that can be of some help when you don't know an encoding [chardet](https://pypi.org/project/chardet/). 
+
+## Missing Data
+
+A machine learning algorithm won't work with missing values. This is essentially correct; however, There are also implementations of some machine learning algorithms, such as [gradient boosting decision trees](https://xgboost.readthedocs.io/en/latest/) that can [handle missing values](https://github.com/dmlc/xgboost/issues/21). 
+
+If you have missing data, you really only have two options, you can **delete data**, or you can **fill in the missing values**. 
+
+
+* When I say **delete data**, I mean that deleting rows and columns that have more than %95 constantly missing values and deleting these rows and columns has no effect on the analysis.
+
+* The process of **filling in missing values** is called **imputation**. A few ways to impute are using the mean or median or mode so that you don't have to delete entire rows or columns of data. Another common method especially for time series data is to use **Forward Fill** (values are pushed forward down to replace any empty values) or **Backward Fill** (Backward Fill does the opposite,values move up to fill in empty values). These technique really only work if the data is ordered by time.  
+
+* Filling in missing values can be somewhat of an art and you'll need to test how different strategies affect the results of your Machine Learning models. 
