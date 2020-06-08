@@ -177,3 +177,12 @@ An outlier is a data point that is far away from the rest of the data. Outliers 
    * If removing an outlier improves the model,then consider removing extreme isolated data points.
    * On the other hand, if removing an extreme value has no or little effect on your results, you can leave the point as is. 
    * Check this [Jupyter notebook]() for more infomation.
+
+## Scaling Data
+Numerical data comes in all different distribution patterns and ranges. However, some machine learning algorithms work better when all of the features are within a similar numerical range.Changing the numerical range of data is called Normalization or Feature Scaling. Two common ways to scale features are called **Rescaling** and **Standardization**. 
+
+* With Rescaling, you take your data and scale down the range, so that the minimum value is zero and the maximum value is one.  The distribution of the data remains the same, but the range changes. 
+
+* With Standardization, you transform the data, so that it has a mean of zero and a standard deviation of one. 
+
+**Notice:** the general shape of the distribution remains the same, which means the information contained in the data hasn't changed. Check this [Jupyter notebook]() for more infomation.
