@@ -172,3 +172,8 @@ An outlier is a data point that is far away from the rest of the data. Outliers 
     * [statistical and machine learning methods for outlier detection](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
   * Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/13_outliers_exercise.ipynb) for more infomation.
 
+* By founding some outliers, what do you do with them:
+
+   * If removing an outlier improves the model,then consider removing extreme isolated data points.
+   * On the other hand, if removing an extreme value has no or little effect on your results, you can leave the point as is. 
+   * Check this [Jupyter notebook]() for more infomation.
