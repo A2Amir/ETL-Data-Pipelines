@@ -149,5 +149,24 @@ A data set might have duplicate data: in other words, A same record is represent
 
 If you plan to use categorical variables with linear regression, oftentimes you should convert those variables into a set of numbers called dummy variables. The reasoning behind these transformations is that machine learning algorithms read in numbers not text. Text needs to be converted into numbers. You could assign a number to each category.  Check this [Jupyter notebook]() for more infomation.
 
+## Outliers
 
+An outlier is a data point that is far away from the rest of the data. Outliers can appear in your data for similar reasons to missing data. An outlier could be due to a data entry error or a processing mistake,  or an outlier might be legitimate data because, in any situation, there's always some probability of obtaining an extreme value. 
 
+**The questions is how to find outliers what to do with them?**
+
+* First I will introduce a few ways for detecting outliers:
+
+  *  When working in one or two dimensions, you can use data visualizations to spot outliers. In the case of one dimensional data, you can plot the data along a number line and data point that falls far to the left or far to the right of most of the data could be considered an outlier. OR using two dimensional plots work the same.
+         <p align="center">
+           <img src="/imgs/5.PNG" alt="" width="500" height="150" >
+          </p>
+  * There are also statistical methods for finding outliers, These include using z-scores from a normal distribution or the tukey method.  Both of these methods use basic statistics like means, standard deviations, or quantiles to identify outliers that are far away from most of the data. 
+  * To find outliers in three or more dimensions, we can use machine learning techniques like PCA to reduce the data to one or two dimensions then we could use the graphical or statistical methods. Another example would be to use a clustering method. In this case, you would first calculate the cluster centroids and then you would measure the distance between each centroid and each point. A large distance might indicate an outlier.
+     <p align="center">
+     <img src="/imgs/6.PNG" alt="" width="300" height="250" >
+    </p>
+  * Scikit-learn also includes various outlier detection algorithms, the links provided abelow. 
+    * [Anomaly-Detection](https://github.com/A2Amir/Anomaly-Detection)
+    * [scikit-learn novelty and outlier detection](http://scikit-learn.org/stable/modules/outlier_detection.html)
+    * [statistical and machine learning methods for outlier detection](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
