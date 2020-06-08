@@ -147,7 +147,7 @@ A data set might have duplicate data: in other words, A same record is represent
 
 ## Dummy Variables 
 
-If you plan to use categorical variables with linear regression, oftentimes you should convert those variables into a set of numbers called dummy variables. The reasoning behind these transformations is that machine learning algorithms read in numbers not text. Text needs to be converted into numbers. You could assign a number to each category.  Check this [Jupyter notebook]() for more infomation.
+If you plan to use categorical variables with linear regression, oftentimes you should convert those variables into a set of numbers called dummy variables. The reasoning behind these transformations is that machine learning algorithms read in numbers not text. Text needs to be converted into numbers. You could assign a number to each category.  Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/12_dummyvariables.ipynb) for more infomation.
 
 ## Outliers
 
@@ -170,3 +170,5 @@ An outlier is a data point that is far away from the rest of the data. Outliers 
     * [Anomaly-Detection](https://github.com/A2Amir/Anomaly-Detection)
     * [scikit-learn novelty and outlier detection](http://scikit-learn.org/stable/modules/outlier_detection.html)
     * [statistical and machine learning methods for outlier detection](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
+  * Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/13_outliers_exercise.ipynb) for more infomation.
+
