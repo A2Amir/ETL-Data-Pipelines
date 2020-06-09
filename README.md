@@ -170,13 +170,13 @@ An outlier is a data point that is far away from the rest of the data. Outliers 
     * [Anomaly-Detection](https://github.com/A2Amir/Anomaly-Detection)
     * [scikit-learn novelty and outlier detection](http://scikit-learn.org/stable/modules/outlier_detection.html)
     * [statistical and machine learning methods for outlier detection](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
-  * Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/13_outliers_exercise.ipynb) for more infomation.
+  * Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/13_outliers.ipynb) for more infomation.
 
 * By founding some outliers, what do you do with them:
 
    * If removing an outlier improves the model,then consider removing extreme isolated data points.
    * On the other hand, if removing an extreme value has no or little effect on your results, you can leave the point as is. 
-   * Check this [Jupyter notebook]() for more infomation.
+   * Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/14_outliers.ipynb) for more infomation.
 
 ## Scaling Data
 
@@ -186,4 +186,13 @@ Numerical data comes in all different distribution patterns and ranges. However,
 
 * With **Standardization**, you transform the data, so that it has a mean of zero and a standard deviation of one. 
 
-**Notice:** the general shape of the distribution remains the same, which means the information contained in the data hasn't changed. Check this [Jupyter notebook]() for more infomation.
+**Notice:** the general shape of the distribution remains the same, which means the information contained in the data hasn't changed. Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/15_scaling.ipynb) for more infomation.
+
+## Feature Engineering
+
+Creating new features is especially useful if your model is underfitting. If you  decide to engineer new features from your dataset, there are quite a few different ways to make new features including,
+**creating categorical variables from numerical variables** , **multiplying features together**, **gathering more data**, **ratios**, **taking the sum or difference between features** or **taking the polynomial of a feature** . 
+
+* A data engineer wouldn't necessarily decide what would be a good feature to engineer, That would be the job of a data scientist. 
+* Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/16_featureengineering.ipynb) for more infomation.
+
