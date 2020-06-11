@@ -197,4 +197,10 @@ Creating new features is especially useful if your model is underfitting. If you
 * Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/16_featureengineering.ipynb) for more infomation.
 
 ## 3.	Load
-Now We've transformed the data, we'll want to store the data somewhere, otherwise we'd lose all your work. There are so many options for data storage. What we choose will depend on our needs. For example, with structured data, a relational database like SQL could be appropriate. If our data fits in a Pandas DataFrame, then a CSV file might work well. * Check this [Jupyter notebook]() for more infomation.
+Now We've transformed the data, we'll want to store the data somewhere, otherwise we'd lose all your work. There are so many options for data storage. What we choose will depend on our needs. For example, with structured data, a relational database like SQL could be appropriate. If our data fits in a Pandas DataFrame, then a CSV file might work well.  Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/17_load.ipynb) for more infomation.
+
+## 4. Putting It All Together
+
+Up until, we've treated each part of the ETL pipeline in isolation. The last step is to write an entire pipeline that extracts,
+transforms, and loads the data all in one go. In this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/18_final.ipynb), we 'll write a program to do exactly that. 
+
