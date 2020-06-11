@@ -144,7 +144,7 @@ Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/
 
 ## Duplicate Data<a name="10"></a>
 
-A data set might have duplicate data: in other words, A same record is represented multiple times. Sometimes, it's easy to find and eliminate duplicate data like when two records are exactly the same. At other times, duplicate data is hard to spot.Check this [Jupyter notebook]() for more infomation.
+A data set might have duplicate data: in other words, A same record is represented multiple times. Sometimes, it's easy to find and eliminate duplicate data like when two records are exactly the same. At other times, duplicate data is hard to spot.Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/11_duplicatedata.ipynb) for more infomation.
 
 ## Dummy Variables <a name="11"></a>
 
