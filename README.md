@@ -10,25 +10,25 @@ An [ETL pipeline](https://en.wikipedia.org/wiki/Extract,_transform,_load) is a s
 Throughout this Repo I am going to use data from the World Bank Website to create a data pipline that can do the steps explained below in one step.:
 
 1.	Extract data from different sources such as:
-    *	csv files
-    *	json files
-    *	APIs
+    *	[csv files](#1)
+    *	[json files](#2)
+    *	[APIs](#3)
 2.	Transform data
-    *	combining data from different sources
-    *	data cleaning
-    *	data types
-    *	parsing dates
-    *	file encodings
-    *	missing data
-    *	duplicate data
-    *	dummy variables
-    *	remove outliers
-    *	scaling features
-    *	engineering features
+    *	[combining data from different sources](#4)
+    *	[data cleaning](#5)
+    *	[data types](#6)
+    *	[parsing dates](#7)
+    *	[file encodings](#8)
+    *	[missing data](#9)
+    *	[duplicate data](#10)
+    *	[dummy variables](#11)
+    *	[remove outliers](#12)
+    *	[scaling features](#13)
+    *	[engineering features](#14)
 3.	Load
-    *	send the transformed data to a database
+    *	[send the transformed data to a database](#15)
 4.	ETL Pipeline
-    *	code an ETL pipeline
+    *	[code an ETL pipeline](#16)
     
 **The data from the World Bank comes from two sources:**
 
@@ -45,7 +45,7 @@ The end goal is to clean these data sets and bring them together into one table 
 ## 1. Extract data from different sources:
 The first step in an ETL pipeline is extraction. Data comes in all types of different formats, and you'll practice extracting data from csv files, JSON files, XML files, SQL databases, and the web.
 
-### CSV files
+### CSV files <a name="1"></a>
 
 CSV stands for comma-separated values. These types of files separate values with a comma, and each entry is on a separate line. Oftentimes, the first entry will contain variable names. Here is an example of what CSV data looks like. This is an abbreviated version of the first two lines in the World Bank projects data csv file.
 
@@ -54,7 +54,8 @@ CSV stands for comma-separated values. These types of files separate values with
 
 * **Take a look at [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/1_csv.ipynb) to familiarize yourself with reading csv files.**
 
-### JSON
+### JSON <a name="2"></a>
+
 JSON is a file format with **key/value** pairs. It looks like a Python dictionary. The exact same CSV file represented above could look like this in JSON:
 
       [{"id":"P162228","regionname":"Other","countryname":"World;World","prodline":"RE","lendinginstr":"Investment Project Financing"}]
@@ -77,7 +78,7 @@ XML is falling out of favor especially because JSON tends to be easier to naviga
 * **Check [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/2_JSON_XML.ipynb) to familiarize yourself with reading JSON and XML files.**
 
 
-### SQL databases
+### SQL databases<a name="3"></a>
 SQL databases store data in tables using [primary and foreign keys](https://docs.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-2017). In a SQL database, the same data would look like this:
 
 <p align="center">
@@ -86,7 +87,7 @@ SQL databases store data in tables using [primary and foreign keys](https://docs
  
 * **Take a look at [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/3_sql.ipynb) to familiarize yourself with reading SQL databases.**
 
-### APIs
+### APIs<a name="4"></a>
 
 Companies and organizations provide APIs so that programmers can access data in an official, safe way. APIs allow you to download, and sometimes even upload or modify, data from a web server without giving you direct access. APIs generally provide data in either JSON or XML format.
 * **Take a look at [this Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/4_API.ipynb) to familiarize yourself with reading from APIs.**
@@ -96,23 +97,23 @@ Companies and organizations provide APIs so that programmers can access data in 
 
 In surveys, data scientists have said that they spend 80% of their time transforming data.In this section I am going through each of these steps.
 
-### combining data from different sources
+### combining data from different sources<a name="4"></a>
 
 In this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/5_combining_data.ipynb) we will combine two data sets together into one pandas data frame. check it to get more familiar.
 
-### Cleaning Data
+### Cleaning Data<a name="5"></a>
 
 Cleaning data is a big topic. Every data set might have its own issues whether that involves missing values, duplicated entries, data entry mistakes, etc. In this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/6_cleaning_data.ipynb) , I'll do some data cleaning on the World Bank projects and World Bank indicators data sets. 
 
-## Data Types
+## Data Types<a name="6"></a>
 
 When reading in a data set, pandas will try to guess the data type of each column like float, integer, datettime, bool, etc. In Pandas, strings are called "object" dtypes. However, Pandas does not always get this right. That is an issue. Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/7_datatypes.ipynb) for more infomation.
 
-## Parsing Dates
+## Parsing Dates<a name="7"></a>
 
 Another common data transformation involves parsing dates. Parsing generally means that you start with a string and then transform that string into a different data type. In this case, that means taking a date in the format of a string and transforming the string into a date type. Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/8_parsingdates.ipynb) for more infomation.
 
-## Encodings
+## Encodings<a name="8"></a>
 
 Encodings are a set of rules mapping string characters to their binary representations. Python supports dozens of different encoding as seen here in this [link](https://docs.python.org/3/library/codecs.html#standard-encodings). Because the web was originally in English, the first encoding rules mapped binary code to the English alphabet.
 
@@ -126,7 +127,7 @@ The problem is that it's difficult to know what encoding rules were used to make
 
 * There is a Python library that can be of some help when you don't know an encoding [chardet](https://pypi.org/project/chardet/). 
 
-## Missing Data
+## Missing Data<a name="9"></a>
 
 A machine learning algorithm won't work with missing values. This is essentially correct; however, There are also implementations of some machine learning algorithms, such as [gradient boosting decision trees](https://xgboost.readthedocs.io/en/latest/) that can [handle missing values](https://github.com/dmlc/xgboost/issues/21). 
 
@@ -141,15 +142,15 @@ If you have missing data, you really only have two options, you can **delete dat
 
 Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/10_imputations.ipynb) for more infomation.
 
-## Duplicate Data
+## Duplicate Data<a name="10"></a>
 
 A data set might have duplicate data: in other words, A same record is represented multiple times. Sometimes, it's easy to find and eliminate duplicate data like when two records are exactly the same. At other times, duplicate data is hard to spot.Check this [Jupyter notebook]() for more infomation.
 
-## Dummy Variables 
+## Dummy Variables <a name="11"></a>
 
 If you plan to use categorical variables with linear regression, oftentimes you should convert those variables into a set of numbers called dummy variables. The reasoning behind these transformations is that machine learning algorithms read in numbers not text. Text needs to be converted into numbers. You could assign a number to each category.  Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/12_dummyvariables.ipynb) for more infomation.
 
-## Outliers
+## Outliers<a name="12"></a>
 
 An outlier is a data point that is far away from the rest of the data. Outliers can appear in your data for similar reasons to missing data. An outlier could be due to a data entry error or a processing mistake,  or an outlier might be legitimate data because, in any situation, there's always some probability of obtaining an extreme value. 
 
@@ -178,7 +179,7 @@ An outlier is a data point that is far away from the rest of the data. Outliers 
    * On the other hand, if removing an extreme value has no or little effect on your results, you can leave the point as is. 
    * Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/14_outliers.ipynb) for more infomation.
 
-## Scaling Data
+## Scaling Data<a name="13"></a>
 
 Numerical data comes in all different distribution patterns and ranges. However, some machine learning algorithms work better when all of the features are within a similar numerical range.Changing the numerical range of data is called **Normalization or Feature Scaling**. Two common ways to scale features are called **Rescaling** and **Standardization**. 
 
@@ -188,7 +189,7 @@ Numerical data comes in all different distribution patterns and ranges. However,
 
 **Notice:** the general shape of the distribution remains the same, which means the information contained in the data hasn't changed. Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/15_scaling.ipynb) for more infomation.
 
-## Feature Engineering
+## Feature Engineering<a name="14"></a>
 
 Creating new features is especially useful if your model is underfitting. If you  decide to engineer new features from your dataset, there are quite a few different ways to make new features including,
 **creating categorical variables from numerical variables** , **multiplying features together**, **gathering more data**, **ratios**, **taking the sum or difference between features** or **taking the polynomial of a feature** . 
@@ -196,10 +197,10 @@ Creating new features is especially useful if your model is underfitting. If you
 * A data engineer wouldn't necessarily decide what would be a good feature to engineer, That would be the job of a data scientist. 
 * Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/16_featureengineering.ipynb) for more infomation.
 
-## 3.	Load
+## 3.	Load<a name="15"></a>
 Now We've transformed the data, we'll want to store the data somewhere, otherwise we'd lose all your work. There are so many options for data storage. What we choose will depend on our needs. For example, with structured data, a relational database like SQL could be appropriate. If our data fits in a Pandas DataFrame, then a CSV file might work well.  Check this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/17_load.ipynb) for more infomation.
 
-## 4. Putting It All Together
+## 4. Putting It All Together<a name="16"></a>
 
 Up until, we've treated each part of the ETL pipeline in isolation. The last step is to write an entire pipeline that extracts,
 transforms, and loads the data all in one go. In this [Jupyter notebook](https://github.com/A2Amir/ETL-Data-Pipelines/blob/master/codes/18_final.ipynb), we 'll write a program to do exactly that. 
